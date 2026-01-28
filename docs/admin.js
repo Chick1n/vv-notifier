@@ -37,7 +37,7 @@ sendBtn.addEventListener("click", async () => {
   }
 
   try {
-    const response = await fetch("/api/update", {
+    const response = await fetch("api/update", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
