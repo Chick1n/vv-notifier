@@ -1,0 +1,14 @@
+{
+  "name": "vv-notifier",
+  "version": "1.0.0",
+  "description": "Simple web-based push notification system for a youth volleyball club.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.3",
+    "express": "^4.19.2",
+    "web-push": "^3.6.7"
+  }
+}

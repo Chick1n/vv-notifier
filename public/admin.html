@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Send Update - Volleyball Club</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Coach Update Console</h1>
+        <p>Send a short message to parents subscribed to selected teams.</p>
+      </header>
+
+      <section class="card">
+        <label class="stack">
+          <span>Admin token</span>
+          <input type="password" id="admin-token" placeholder="Enter admin token" />
+        </label>
+
+        <label class="stack">
+          <span>Message</span>
+          <textarea id="message" rows="4" placeholder="Practice moved to 6:30pm, South HS"></textarea>
+        </label>
+
+        <label class="stack">
+          <span>Notification title (optional)</span>
+          <input type="text" id="title" placeholder="Practice Update" />
+        </label>
+
+        <h2>Teams</h2>
+        <div class="checkbox-grid" id="admin-team-options">
+          <label><input type="checkbox" value="14U" /> 14U</label>
+          <label><input type="checkbox" value="15U" /> 15U</label>
+          <label><input type="checkbox" value="16U" /> 16U</label>
+          <label><input type="checkbox" value="17U" /> 17U</label>
+          <label><input type="checkbox" value="18U" /> 18U</label>
+          <label><input type="checkbox" value="Boys" /> Boys</label>
+        </div>
+
+        <button id="send-btn" class="primary">Send Update</button>
+        <p class="status" id="admin-status">Ready to send.</p>
+      </section>
+    </main>
+
+    <script src="/admin.js"></script>
+  </body>
+</html>

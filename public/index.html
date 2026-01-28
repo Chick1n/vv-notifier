@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volleyball Updates</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Youth Volleyball Updates</h1>
+        <p>
+          Subscribe once to get instant practice updates. Notifications arrive even when this site is closed.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>1) Choose your teams</h2>
+        <div class="checkbox-grid" id="team-options">
+          <label><input type="checkbox" value="14U" /> 14U</label>
+          <label><input type="checkbox" value="15U" /> 15U</label>
+          <label><input type="checkbox" value="16U" /> 16U</label>
+          <label><input type="checkbox" value="17U" /> 17U</label>
+          <label><input type="checkbox" value="18U" /> 18U</label>
+          <label><input type="checkbox" value="Boys" /> Boys</label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>2) Turn on notifications</h2>
+        <p>
+          Tap the button below, then allow notifications when your browser asks.
+        </p>
+        <div class="button-row">
+          <button id="enable-btn" class="primary">Enable Notifications</button>
+          <button id="save-btn" class="secondary">Save Team Preferences</button>
+        </div>
+        <p class="status" id="status">Not subscribed yet.</p>
+      </section>
+
+      <section class="card">
+        <h2>3) Optional: Add to home screen</h2>
+        <p>
+          On iPhone Safari, tap the share icon → “Add to Home Screen.” Android Chrome: tap the menu → “Add to Home screen.”
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Need to stop updates?</h2>
+        <p>You can unsubscribe at any time.</p>
+        <button id="unsubscribe-btn" class="ghost">Unsubscribe</button>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
