@@ -32,7 +32,7 @@ const getServiceWorker = async () => {
   if (!("serviceWorker" in navigator)) {
     throw new Error("Service workers are not supported in this browser.");
   }
-  return navigator.serviceWorker.register("/sw.js");
+  return navigator.serviceWorker.register("sw.js");
 };
 
 const getExistingSubscription = async () => {
@@ -41,7 +41,7 @@ const getExistingSubscription = async () => {
 };
 
 const fetchVapidKey = async () => {
-  const response = await fetch("/api/vapidPublicKey");
+  const response = await fetch("api/vapidPublicKey");
   if (!response.ok) {
     throw new Error("VAPID key missing. Please contact your coach.");
   }
@@ -68,7 +68,7 @@ const subscribeForTeams = async () => {
         applicationServerKey: urlBase64ToUint8Array(publicKey)
       }));
 
-    const response = await fetch("/api/subscribe", {
+    const response = await fetch("api/subscribe", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -101,7 +101,7 @@ const updatePreferences = async () => {
       return;
     }
 
-    const response = await fetch("/api/subscribe", {
+    const response = await fetch("api/subscribe", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -128,7 +128,7 @@ const unsubscribe = async () => {
       return;
     }
 
-    await fetch("/api/unsubscribe", {
+    await fetch("api/unsubscribe", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
